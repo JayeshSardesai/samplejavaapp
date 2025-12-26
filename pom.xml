@@ -30,6 +30,7 @@
     </repositories>
 
     <dependencies>
+
         <!-- Vaadin -->
         <dependency>
             <groupId>com.vaadin</groupId>
@@ -57,7 +58,7 @@
             <version>2.20.0</version>
         </dependency>
 
-        <!-- Testing -->
+        <!-- JUnit 5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -71,6 +72,7 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -87,14 +89,14 @@
                 </configuration>
             </plugin>
 
-            <!-- JaCoCo -->
+            <!-- JaCoCo (REPORT ONLY – NO CHECK) -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco.version}</version>
                 <executions>
 
-                    <!-- Attach JaCoCo agent -->
+                    <!-- Attach agent -->
                     <execution>
                         <id>prepare-agent</id>
                         <goals>
@@ -109,17 +111,6 @@
                         <goals>
                             <goal>report</goal>
                         </goals>
-                    </execution>
-
-                    <!-- Coverage check (DISABLED – Solution 1) -->
-                    <execution>
-                        <id>coverage-check</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <configuration>
-                            <skip>true</skip>
-                        </configuration>
                     </execution>
 
                 </executions>
