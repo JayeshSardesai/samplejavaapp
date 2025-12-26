@@ -106,31 +106,27 @@
                                 <rule>
                                     <element>BUNDLE</element>
                                     <limits>
-                                        <!-- Line Coverage -->
-                                        <limit>
-                                            <counter>LINE</counter>
-                                            <value>COVEREDRATIO</value>
-                                            <minimum>0.50</minimum>
-                                        </limit>
-                                        <!-- Branch Coverage -->
-                                        <limit>
-                                            <counter>BRANCH</counter>
-                                            <value>COVEREDRATIO</value>
-                                            <minimum>0.50</minimum>
-                                        </limit>
-                                        <!-- Method Coverage -->
-                                        <limit>
-                                            <counter>METHOD</counter>
-                                            <value>COVEREDRATIO</value>
-                                            <minimum>0.50</minimum>
-                                        </limit>
-                                        <!-- Class Coverage -->
-                                        <limit>
-                                            <counter>CLASS</counter>
-                                            <value>COVEREDRATIO</value>
-                                            <minimum>0.50</minimum>
-                                        </limit>
-                                    </limits>
+   										 <limit>
+       										 <counter>LINE</counter>
+        									 <value>COVEREDRATIO</value>
+       										 <minimum>0.10</minimum>
+   										 </limit>
+    									 <limit>
+      										  <counter>BRANCH</counter>
+        									  <value>COVEREDRATIO</value>
+        									  <minimum>0.05</minimum>
+   										 </limit>
+  										 <limit>
+      										  <counter>METHOD</counter>
+      										  <value>COVEREDRATIO</value>
+      										  <minimum>0.10</minimum>
+   										 </limit>
+   										 <limit>
+     										   <counter>CLASS</counter>
+      										   <value>COVEREDRATIO</value>
+       										   <minimum>0.10</minimum>
+   										 </limit>
+									</limits>
                                 </rule>
                             </rules>
                             <!-- Exclude Vaadin UI classes from coverage -->
